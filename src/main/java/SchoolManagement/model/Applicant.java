@@ -1,4 +1,6 @@
-package SchoolManagement;
+package SchoolManagement.model;
+
+import SchoolManagement.enums.Gender;
 
 public class Applicant {
     private String name;
@@ -8,12 +10,16 @@ public class Applicant {
     private String email;
     private boolean isAdmitted;
 
-    public Applicant(String name, String gender, int age, int phone, String email) {
+    public Applicant(String name, Gender gender, int age, int phone, String email) {
         this.name = name;
-        this.gender = gender;
+        this.gender = gender.name();
         this.age = age;
         this.phone = phone;
         this.email = email;
+    }
+
+    public Applicant() {
+
     }
 
     public String getName() {

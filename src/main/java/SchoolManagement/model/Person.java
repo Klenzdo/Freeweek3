@@ -1,4 +1,4 @@
-package SchoolManagement;
+package SchoolManagement.model;
 
 public abstract class Person{
     private String name;
@@ -6,6 +6,9 @@ public abstract class Person{
     private int age;
     private int id;
     private String role;
+    public Person(){
+
+    }
 
     public Person(String name, String gender, int age, int id, String role) {
         this.name = name;
@@ -55,7 +58,16 @@ public abstract class Person{
         this.role = role;
     }
 
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                ", id=" + id +
+                ", role='" + role + '\'' +
+                '}';
+    }
 }
 
 
